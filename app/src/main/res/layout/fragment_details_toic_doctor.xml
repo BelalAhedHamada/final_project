@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    tools:context=".View.Doctor.DetailsTopicDoctorFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_details_doctor"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="@drawable/bg_tap_bar">
+
+                    <ImageButton
+                        android:id="@+id/imageButton2"
+                        android:layout_width="49dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="50dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:src="@drawable/ic_baseline_arrow_back_24"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/tv_nameTopic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="الاسم"
+
+                        android:textColor="@color/off_white"
+                        android:textSize="20sp" />
+
+
+                    <!--                    <ImageButton-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="45dp"-->
+                    <!--                        android:layout_gravity="center|end"-->
+                    <!--                        android:layout_weight="1"-->
+                    <!--                        android:background="@null"-->
+
+                    <!--                        android:src="@drawable/baseline_remove_red_eye_24"-->
+                    <!--                        android:visibility="invisible" />-->
+
+
+                    <ImageButton
+                        android:id="@+id/img_menu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center|end"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@null"
+                        android:src="@drawable/menu"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView16"
+                android:layout_width="0dp"
+                android:layout_height="264dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="18dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cv_details_doctor">
+
+                <ImageView
+                    android:id="@+id/image_D_D"
+                    android:layout_width="269dp"
+                    android:layout_height="195dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/web2" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_advicesDoctor"
+                android:layout_width="0dp"
+                android:layout_height="435dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView16" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btn_Go_Add_advices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginBottom="31dp"
+                android:clickable="true"
+                android:src="@drawable/ic_baseline_add_24"
+                android:theme="@style/Theme.Material3.Light"
+                app:backgroundTint="@color/blue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btn_Go_showPatient"
+                android:layout_width="44dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="40dp"
+                app:layout_constraintBottom_toTopOf="@+id/btn_Go_Add_advices"
+                app:layout_constraintEnd_toEndOf="@+id/btn_Go_Add_advices"
+                app:layout_constraintStart_toStartOf="@+id/btn_Go_Add_advices">
+
+                <ImageView
+                    android:id="@+id/imageView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/man1" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="44dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/blue"
+                app:cardCornerRadius="40dp"
+                app:layout_constraintBottom_toTopOf="@id/btn_Go_showPatient"
+                app:layout_constraintStart_toStartOf="parent">
+
+<!--                <ToggleButton-->
+<!--                    android:id="@+id/img_see"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="45dp"-->
+<!--                    android:layout_gravity="center|end"-->
+<!--                    android:background="@null"-->
+<!--                    android:src="@drawable/baseline_remove_red_eye_24"-->
+<!--                    android:textOff=""-->
+<!--                    android:textOn=""-->
+
+
+<!--                    />-->
+
+                <ImageView
+                    android:id="@+id/img_see"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center|end"
+                    android:background="@null"
+                    android:src="@drawable/baseline_remove_red_eye_24"
+                    android:textOff=""
+                    android:textOn=""
+
+
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

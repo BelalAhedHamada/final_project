@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeFragment2"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="الصفحة الرئيسة" />
+    <item
+        android:id="@+id/profilePatientFragment"
+        android:icon="@drawable/ic_baseline_face_24"
+        android:title="البروفايل" />
+
+    <item
+        android:id="@+id/notificationFragment2"
+        android:icon="@drawable/notification"
+        android:title="الاشعارات" />
+
+</menu>

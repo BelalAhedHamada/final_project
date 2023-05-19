@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.Patient.DetailsAdvicesPatientFragment">
+
+
+    <LinearLayout
+        android:id="@+id/linearLLL"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/bg_tap_bar"
+        android:layoutDirection="rtl"
+        android:orientation="horizontal"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/img_back"
+            android:layout_width="49dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_name_advices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="الاسم"
+            android:textAlignment="center"
+            android:textColor="@color/off_white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/img_chat"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_baseline_message_24" />
+
+        <!--                <TextView-->
+        <!--                    android:id="@+id/tv__countSeeAdv"-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_gravity="center"-->
+        <!--                    android:layout_marginEnd="30dp"-->
+        <!--                    android:text="5"-->
+        <!--                    android:textAlignment="center"-->
+        <!--                    android:textColor="@color/off_white"-->
+        <!--                    android:textSize="20sp"-->
+        <!--                    />-->
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="614dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLLL"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="600dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView13"
+                android:layout_width="0dp"
+                android:layout_height="176dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/img_det_advices"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/web2" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tv_des_advices"
+                android:layout_width="331dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="يبدأ التحقيق في علم الأحياء عادة بملاحظة - أي شيء يلفت انتباه عالم الأحياء. على سبيل المثال ، قد يلاحظ عالم بيولوجيا السرطان أن نوعًا معينًا من السرطان لا يمكن علاجه بالعلاج الكيميائي ويتساءل عن سبب ذلك. عالمة البيئة البحرية ، التي ترى أن الشعاب المرجانية في مواقعها الميدانية تتبييض - تتحول إلى اللون الأبيض - قد تشرع في فهم السبب."
+                app:layout_constraintEnd_toEndOf="@+id/cardView13"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/cardView13"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layoutDirection="rtl"
+                android:text="الوصف"
+
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/cardView13"
+                app:layout_constraintTop_toBottomOf="@+id/cardView13" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView15"
+                android:layout_width="340dp"
+                android:layout_height="213dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_des_advices"
+                app:layout_constraintStart_toStartOf="@+id/tv_des_advices"
+                app:layout_constraintTop_toBottomOf="@+id/tv_des_advices">
+
+                <com.google.android.exoplayer2.ui.PlayerView
+                    android:id="@+id/videoViewTech"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:saveEnabled="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:resize_mode="fill" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:layoutDirection="rtl"
+                android:text="الأسئلة"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+
+                app:layout_constraintBottom_toTopOf="@+id/rv_question"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView15" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_question"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="43dp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView30"
+                tools:listitem="@layout/item_question" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_Go_Add_Q"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="28dp"
+        android:clickable="true"
+        android:layoutDirection="rtl"
+        android:src="@drawable/ic_baseline_add_24"
+        android:theme="@style/Theme.Material3.Light"
+        app:backgroundTint="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

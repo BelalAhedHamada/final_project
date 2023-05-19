@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/homeFragment2">
+
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.example.finalcloudproject.View.Patient.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment2_to_detailsTopicPatientFragment"
+            app:destination="@id/detailsTopicPatientFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"/>
+        <action
+            android:id="@+id/action_homeFragment2_to_detailsAdvicesPatientFragment"
+            app:destination="@id/detailsAdvicesPatientFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"/>
+        <action
+            android:id="@+id/action_homeFragment2_to_chatTopicFragment"
+            app:destination="@id/chatTopicFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"/>
+        <action
+            android:id="@+id/action_homeFragment2_to_profilePatientFragment"
+            app:destination="@id/profilePatientFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/topicsFragment"
+        android:name="com.example.finalcloudproject.View.Patient.TopicsFragment"
+        android:label="fragment_topics"
+        tools:layout="@layout/fragment_topics" />
+    <fragment
+        android:id="@+id/notificationFragment2"
+        android:name="com.example.finalcloudproject.View.Patient.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/detailsTopicPatientFragment"
+        android:name="com.example.finalcloudproject.View.Patient.DetailsTopicPatientFragment"
+        android:label="fragment_details_topic_patient"
+        tools:layout="@layout/fragment_details_topic_patient">
+        <argument
+            android:name="topic"
+            app:argType="com.example.finalcloudproject.Model.Topic" />
+        <argument
+            android:name="color"
+            app:argType="integer[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsAdvicesPatientFragment"
+        android:name="com.example.finalcloudproject.View.Patient.DetailsAdvicesPatientFragment"
+        android:label="fragment_details_advices_patient"
+        tools:layout="@layout/fragment_details_advices_patient">
+        <argument
+            android:name="advice"
+            app:argType="com.example.finalcloudproject.Model.Advices" />
+        <argument
+            android:name="myTopic"
+            app:argType="com.example.finalcloudproject.Model.MyTopic" />
+        <action
+            android:id="@+id/action_detailsAdvicesPatientFragment_to_reQuestionPatientFragment"
+            app:destination="@id/reQuestion11PatientFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"/>
+        <action
+            android:id="@+id/action_detailsAdvicesPatientFragment_to_reQuestionPatient2Fragment"
+            app:destination="@id/reQuestionPatient2Fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/reQuestion11PatientFragment"
+        android:name="com.example.finalcloudproject.View.Patient.ReQuestionPatientFragment"
+        android:label="fragment_re_question_patient"
+        tools:layout="@layout/fragment_re_question_patient">
+        <argument
+            android:name="topic11"
+            app:argType="com.example.finalcloudproject.Model.MyTopic" />
+        <argument
+            android:name="question11"
+            app:argType="com.example.finalcloudproject.Model.Question" />
+        <argument
+            android:name="advice11"
+            app:argType="com.example.finalcloudproject.Model.Advices" />
+        <action
+            android:id="@+id/action_reQuestion11PatientFragment_to_updateReQuestionPatientBottomSheetFragment"
+            app:destination="@id/updateReQuestionPatientBottomSheetFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/reQuestionPatient2Fragment"
+        android:name="com.example.finalcloudproject.ReQuestionPatient2Fragment"
+        android:label="fragment_re_question_patient2"
+        tools:layout="@layout/fragment_re_question_patient2">
+        <argument
+            android:name="topic3"
+            app:argType="com.example.finalcloudproject.Model.MyTopic" />
+        <argument
+            android:name="question3"
+            app:argType="com.example.finalcloudproject.Model.Question" />
+        <argument
+            android:name="advice3"
+            app:argType="com.example.finalcloudproject.Model.Advices" />
+    </fragment>
+    <dialog
+        android:id="@+id/updateReQuestionPatientBottomSheetFragment"
+        android:name="com.example.finalcloudproject.View.Patient.UpdateReQuestionPatientBottomSheetFragment"
+        android:label="fragment_update_re_question_patient_bottom_sheet"
+        tools:layout="@layout/fragment_update_re_question_patient_bottom_sheet" >
+        <argument
+            android:name="reQuestion"
+            app:argType="com.example.finalcloudproject.Model.Question" />
+        <argument
+            android:name="question"
+            app:argType="com.example.finalcloudproject.Model.Question" />
+        <argument
+            android:name="advice"
+            app:argType="com.example.finalcloudproject.Model.Advices" />
+        <argument
+            android:name="topic"
+            app:argType="com.example.finalcloudproject.Model.MyTopic" />
+    </dialog>
+    <fragment
+        android:id="@+id/chatTopicFragment"
+        android:name="com.example.finalcloudproject.View.Patient.ChatTopicFragment"
+        android:label="fragment_chat_topic"
+        tools:layout="@layout/fragment_chat_topic" >
+        <argument
+            android:name="topic"
+            app:argType="com.example.finalcloudproject.Model.MyTopic" />
+        <action
+            android:id="@+id/action_chatTopicFragment_to_homeFragment2"
+            app:destination="@id/homeFragment2"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/profilePatientFragment"
+        android:name="com.example.finalcloudproject.View.Patient.ProfilePatientFragment"
+        android:label="fragment_profile_patient"
+        tools:layout="@layout/fragment_profile_patient" >
+        <action
+            android:id="@+id/action_profilePatientFragment_to_homeFragment2"
+            app:destination="@id/homeFragment2"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"/>
+        <action
+            android:id="@+id/action_profilePatientFragment_to_advicesProfileBottomSheetFragment"
+            app:destination="@id/advicesProfileBottomSheetFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"/>
+    </fragment>
+    <dialog
+        android:id="@+id/advicesProfileBottomSheetFragment"
+        android:name="com.example.finalcloudproject.View.Patient.AdvicesProfileBottomSheetFragment"
+        android:label="fragment_advices_profile_bottom_sheet"
+        tools:layout="@layout/fragment_advices_profile_bottom_sheet" >
+        <argument
+            android:name="topic"
+            app:argType="com.example.finalcloudproject.Model.MyTopic" />
+        <action
+            android:id="@+id/action_advicesProfileBottomSheetFragment_to_detailsAdvicesPatientFragment"
+            app:destination="@id/detailsAdvicesPatientFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"/>
+    </dialog>
+</navigation>

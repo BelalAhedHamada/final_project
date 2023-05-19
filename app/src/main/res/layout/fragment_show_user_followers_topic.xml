@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E7EEFB"
+    tools:context=".View.Doctor.ShowUserFollowersTopicFragment">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_show_user"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layoutDirection="rtl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/bg_tap_bar">
+
+            <ImageButton
+                android:id="@+id/img_back"
+                android:layout_width="49dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="30dp"
+                android:background="@null"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="80dp"
+                android:gravity="center"
+                android:text="المتابعين"
+                android:textColor="@color/off_white"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_showUser"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_show_user"
+        tools:listitem="@layout/item_show_user" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView10"
+        android:layout_width="343dp"
+        android:layout_height="301dp"
+
+        android:layout_marginTop="68dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rv_showUser"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_url="https://assets10.lottiefiles.com/packages/lf20_5035qbsq.json" />
+
+    <TextView
+        android:id="@+id/textView38"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:text="لا يوجد مستخدمين متابعين هذا الموضوع"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/animationView10"
+        app:layout_constraintStart_toStartOf="@+id/animationView10"
+        app:layout_constraintTop_toBottomOf="@+id/animationView10" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

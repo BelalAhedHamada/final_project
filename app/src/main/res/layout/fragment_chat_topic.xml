@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.Patient.ChatTopicFragment">
+
+
+    <LinearLayout
+        android:id="@+id/linearLLL"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/bg_tap_bar"
+        android:layoutDirection="rtl"
+        android:orientation="horizontal"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/img_back"
+            android:layout_width="49dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="الاسم"
+            android:textAlignment="center"
+            android:textColor="@color/off_white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/img_delete_message_user"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_baseline_delete_24"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatactivityRecyclerView"
+        android:layout_width="413dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/etMessage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLLL" />
+
+
+    <EditText
+        android:id="@+id/etMessage"
+        android:layout_width="0dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/back_view"
+        android:hint="Type Message"
+        android:inputType="text"
+        android:padding="12dp"
+        android:textColor="#8C8A8A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnSendMessageactiv"
+        app:layout_constraintStart_toEndOf="@+id/btnSendImage" />
+
+    <ImageButton
+        android:id="@+id/btnSendMessageactiv"
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/back_butf"
+        android:src="@drawable/ic_send"
+        android:text="sign_up"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chatactivityRecyclerView"
+        app:tint="#FFFFFF" />
+
+    <ImageButton
+        android:id="@+id/btnSendImage"
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/back_butf"
+        android:src="@drawable/ic_gallery"
+        android:text="sign_up"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chatactivityRecyclerView"
+        app:tint="#FFFFFF" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

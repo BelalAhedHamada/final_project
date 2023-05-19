@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "589008678731",
+    "project_id": "final-cloud-project-99af3",
+    "storage_bucket": "final-cloud-project-99af3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:589008678731:android:ac32dd61a64c0baf9342ce",
+        "android_client_info": {
+          "package_name": "com.example.finalcloudproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "589008678731-cok8mn4ogt0gvj28gglekarsfti3d2sp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDG8-d4XNkKusTL7ffnSQmPjICba5HVmA4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "589008678731-cok8mn4ogt0gvj28gglekarsfti3d2sp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
